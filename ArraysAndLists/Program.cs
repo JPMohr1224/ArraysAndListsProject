@@ -27,8 +27,8 @@ foreach (int num in numbers)
     {
         evens.Add(num);
     }
-    else _ = num % 2 == 1;
-     odds.Add(num); 
+    else 
+        odds.Add(num); 
 }
 
 
@@ -45,8 +45,11 @@ foreach (int num in evens)
 /* Using a for loop,
  * display the numbers in your "odds" list
  */
-int i;
-for (i = 0; i < numbers.Length; i += 2)
+
+for (int i = 0; i < numbers.Length; i++)
 {
-    Console.WriteLine(odds[i]);
+    if (numbers[i] % 2 == 1)
+    {
+        Console.WriteLine(numbers[i]);
+    };
 }
